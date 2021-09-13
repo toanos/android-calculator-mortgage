@@ -78,6 +78,7 @@
         <Button
             android:id="@+id/modify_data"
             android:text="@string/modify_data"
+            android:onClick="modifyData"
             />
     </TableRow>
 </TableLayout>
