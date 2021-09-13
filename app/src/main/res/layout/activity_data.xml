@@ -81,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:inputType="numberDecimal"
+        android:minWidth="48dp"
         android:minHeight="48dp"
         android:text="@string/rateDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/label_rate"
