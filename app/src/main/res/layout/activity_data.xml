@@ -55,6 +55,7 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/label_amount"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
         android:text="@string/amountDecimal" />
 
     <TextView
@@ -74,6 +75,7 @@
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/label_rate"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
         android:text="@string/rateDecimal" />
 
     <Button
