@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- TODO ddd color -->
+    <color name="colorPrimary"></color>
+    <color name="colorPrimaryDark"></color>
+    <color name="colorAccent"></color>
 </resources>
