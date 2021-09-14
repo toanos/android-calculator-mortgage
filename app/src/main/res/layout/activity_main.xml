@@ -50,7 +50,6 @@
         android:layout_height="5dip"
         android:background="#FF0000" />
 
-    <!-- TODO implement the rest of the layout -->
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
