@@ -79,13 +79,12 @@
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:gravity="center">
 
         <Button
             android:id="@+id/modify_data_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:onClick="modifyData"
             android:text="@string/modify_data" />
     </TableRow>

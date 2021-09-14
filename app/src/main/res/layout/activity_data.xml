@@ -13,35 +13,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label_years"
+        app:layout_constraintEnd_toStartOf="@+id/mortgage_years"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <RadioButton
-        android:id="@+id/ten"
+    <RadioGroup
+        android:id="@+id/mortgage_years"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ten"
+        android:orientation="horizontal"
         app:layout_constraintStart_toEndOf="@+id/label_years"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioButton
-        android:id="@+id/fifteen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fifteen"
-        app:layout_constraintStart_toEndOf="@+id/ten"
-        app:layout_constraintTop_toTopOf="parent" />
+        <RadioButton
+            android:id="@+id/ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ten"
+            app:layout_constraintStart_toEndOf="@+id/label_years"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:id="@+id/thirty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="@string/thirty"
-        app:layout_constraintStart_toEndOf="@+id/fifteen"
-        app:layout_constraintTop_toTopOf="parent" />
+        <RadioButton
+            android:id="@+id/fifteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteen"
+            app:layout_constraintStart_toEndOf="@+id/ten"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <RadioButton
+            android:id="@+id/thirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/thirty"
+            app:layout_constraintStart_toEndOf="@+id/fifteen"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/label_amount"
