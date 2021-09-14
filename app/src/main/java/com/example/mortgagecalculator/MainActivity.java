@@ -14,8 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void modifyData( View v ) {
+    public void modifyData(View v) {
 //        Intent activityDataView = new Intent();
 //        this.startActivity(activityDataView);
     }
+
 }
