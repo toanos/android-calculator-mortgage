@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void modifyData(View v) {
-//        Intent activityDataView = new Intent();
+//        Intent activityDataView = new Intent(this, DataActivity.class);
 //        this.startActivity(activityDataView);
     }
 
