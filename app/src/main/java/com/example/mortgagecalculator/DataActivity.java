@@ -31,25 +31,29 @@ public class DataActivity extends AppCompatActivity {
 
     public void updateMortgageObject( ) {
         Mortgage mortgage = MainActivity.mortgage;
-
+        // update years
         RadioButton rb10 = ( RadioButton ) findViewById( R.id.ten );
         RadioButton rb15 = ( RadioButton ) findViewById( R.id.fifteen );
-        int years = 30;
+        int years = 30; // default
         if( rb10.isChecked( ) )
             years = 10;
-        else if (false)
+        else if ( rb15.isChecked( ) )
         {
-            int x = 12; // todo finish
+            years = 15;
         }
         mortgage.setYears( years );
+        // update amount and rate
         EditText amountET = ( EditText ) findViewById( R.id.data_amount );
         String amountString = amountET.getText( ).toString( );
-        // todo finish
+        EditText interestET = ( EditText ) findViewById( R.id.data_rate );
+        String interestString = interestET.getText().toString( );
         try {
             float amount = Float.parseFloat( amountString );
             mortgage.setAmount( amount );
-            // todo finish
+            float interest = Float.parseFloat( interestString );
+            mortgage.setAmount( interest );
         } catch( NumberFormatException nfe ) {
+            // If error set default rates and amounts
             mortgage.setAmount( 100000.0f );
             mortgage.setRate( .035f );
         }
@@ -59,6 +63,7 @@ public class DataActivity extends AppCompatActivity {
 
 
     public void goBack(View v) {
+        this.updateMortgageObject();
         this.finish();
     }
 }
