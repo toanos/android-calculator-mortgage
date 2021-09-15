@@ -8,9 +8,12 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static Mortgage mortgage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mortgage = new Mortgage();
         setContentView(R.layout.activity_main);
     }
 
