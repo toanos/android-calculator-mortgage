@@ -46,7 +46,7 @@ public class DataActivity extends AppCompatActivity {
         EditText amountEditText = (EditText) findViewById(R.id.data_amount);
         String amountString = amountEditText.getText().toString();
         EditText rateEditText = (EditText) findViewById(R.id.data_rate);
-        String rateString = amountEditText.getText().toString();
+        String rateString = rateEditText.getText().toString();
         try {
             float amount = Float.parseFloat(amountString);
             mortgage.setAmount(amount);
