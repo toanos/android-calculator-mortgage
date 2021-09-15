@@ -13,6 +13,7 @@ public class DataActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
+        updateView();
     }
 
     public void updateView() {
@@ -32,10 +33,33 @@ public class DataActivity extends AppCompatActivity {
     }
 
     public void updateMortgageObject() {
-        // TODO implement
+        Mortgage mortgage = MainActivity.mortgage;
+        RadioButton radioButton10 = (RadioButton) findViewById(R.id.ten);
+        RadioButton radioButton15 = (RadioButton) findViewById(R.id.fifteen);
+        int years = 30;
+        if (radioButton10.isChecked()) {
+            years = 10;
+        } else if (radioButton15.isChecked()) {
+            years = 15;
+        }
+        mortgage.setYears(years);
+        EditText amountEditText = (EditText) findViewById(R.id.data_amount);
+        String amountString = amountEditText.getText().toString();
+        EditText rateEditText = (EditText) findViewById(R.id.data_rate);
+        String rateString = amountEditText.getText().toString();
+        try {
+            float amount = Float.parseFloat(amountString);
+            mortgage.setAmount(amount);
+            float rate = Float.parseFloat(rateString);
+            mortgage.setRate(rate);
+        } catch (NumberFormatException nfe) {
+            mortgage.setAmount(100000.00f);
+            mortgage.setRate(.035f);
+        }
     }
 
     public void goBack(View V){
+        updateMortgageObject();
         this.finish();
     }
 
