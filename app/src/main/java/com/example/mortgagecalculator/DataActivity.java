@@ -15,6 +15,11 @@ public class DataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data);
     }
 
+    public void onStart() {
+        super.onStart();
+        updateView();
+    }
+
     public void updateView( ) {
         Mortgage mortgage = MainActivity.mortgage;
         if( mortgage.getYears( ) == 10 ) {
@@ -53,7 +58,7 @@ public class DataActivity extends AppCompatActivity {
             float amount = Float.parseFloat( amountString );
             mortgage.setAmount( amount );
             float interest = Float.parseFloat( interestString );
-            mortgage.setAmount( interest );
+            mortgage.setRate( interest );
         } catch( NumberFormatException nfe ) {
             // If error set default rates and amounts
             mortgage.setAmount( 100000.0f );
