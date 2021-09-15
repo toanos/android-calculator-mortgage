@@ -16,17 +16,19 @@ public class DataActivity extends AppCompatActivity {
     }
 
     public void updateView( ) {
-        Mortgage mortgage = MainActivity.mortgage; if( mortgage.getYears( ) == 10 ) {
+        Mortgage mortgage = MainActivity.mortgage;
+        if( mortgage.getYears( ) == 10 ) {
             RadioButton rb10 = ( RadioButton ) findViewById( R.id.ten );
             rb10.setChecked( true );
-        } else if (false) {
-            int x = 12;
-//            todo fix this block
+        } else if ( mortgage.getYears( ) == 15 ) {
+            RadioButton rb15 = ( RadioButton ) findViewById( R.id.fifteen );
+            rb15.setChecked( true );
         } // else do nothing (default is 30)
 
         EditText amountET = ( EditText ) findViewById( R.id.data_amount );
         amountET.setText( "" + mortgage.getAmount( ) );
-        // todo finish
+        EditText interestET = ( EditText ) findViewById( R.id.data_rate );
+        interestET.setText( "" + mortgage.getRate( ) );
     }
 
     public void updateMortgageObject( ) {
