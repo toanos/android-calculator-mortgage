@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         amountTV.setText( mortgage.getFormattedAmount() );
         TextView yearsTV = ( TextView ) findViewById( R.id.years );
         yearsTV.setText("" + mortgage.getYears() );
-//        TODO complete
+        TextView interestTV = (TextView) findViewById(R.id.rate);
+        interestTV.setText("" + mortgage.getRate() );
     }
 
     public void modifyData(View v) {
