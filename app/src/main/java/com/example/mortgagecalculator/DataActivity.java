@@ -25,7 +25,14 @@ public class DataActivity extends AppCompatActivity {
             radioButton15.setChecked(true);
         } // 30 years is checked by default
 
-//        EditText amountEditText = (EditText) findViewById(R.id.amount);
+        EditText amountEditText = (EditText) findViewById(R.id.data_amount);
+        amountEditText.setText("" + mortgage.getAmount());
+        EditText rateEditText = (EditText) findViewById(R.id.data_rate);
+        rateEditText.setText("" + mortgage.getRate());
+    }
+
+    public void updateMortgageObject() {
+        // TODO implement
     }
 
     public void goBack(View V){
