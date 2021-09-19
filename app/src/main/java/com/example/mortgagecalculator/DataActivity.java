@@ -52,6 +52,7 @@ public class DataActivity extends AppCompatActivity {
             mortgage.setAmount(amount);
             float rate = Float.parseFloat(rateString);
             mortgage.setRate(rate);
+            mortgage.setPreferences(this);
         } catch (NumberFormatException nfe) {
             mortgage.setAmount(100000.00f);
             mortgage.setRate(.035f);
