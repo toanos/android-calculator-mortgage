@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         yearsTextView.setText("" + mortgage.getYears());
         TextView rateTextView = (TextView) findViewById(R.id.rate);
         rateTextView.setText("" + mortgage.getRate());
+        // Calculate mortgage
+        TextView monthlyPaymentTextView = (TextView) findViewById(R.id.monthly_payment);
+        monthlyPaymentTextView.setText("" + mortgage.formattedMonthlyPayment());
+        TextView totalPaymentTextView = (TextView) findViewById(R.id.total_payment);
+        totalPaymentTextView.setText("" + mortgage.formattedTotalPayment());
     }
 
     public void modifyData(View v) {
