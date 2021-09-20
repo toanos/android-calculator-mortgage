@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         TextView yearsTextView = (TextView) findViewById(R.id.years);
         yearsTextView.setText("" + mortgage.getYears());
         TextView rateTextView = (TextView) findViewById(R.id.rate);
-        rateTextView.setText("" + mortgage.getRate());
+        rateTextView.setText((mortgage.getRate() * 100) + "%");
         // Calculate mortgage
         TextView monthlyPaymentTextView = (TextView) findViewById(R.id.monthly_payment);
         monthlyPaymentTextView.setText("" + mortgage.formattedMonthlyPayment());
